@@ -1,0 +1,362 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f3f4f6;
+    color: #374151;
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.form-section {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.form-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 0.625rem 0.875rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    background-color: #f9fafb;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+.add-button {
+    background-color: #3b82f6;
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.add-button:hover {
+    background-color: #2563eb;
+    transform: scale(1.1);
+}
+
+.repeater-item {
+    background-color: #f9fafb;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    border: 1px solid #e5e7eb;
+    margin-bottom: 0.75rem;
+    position: relative;
+    padding-top: 1.75rem;
+}
+
+.repeater-item .remove-button {
+    position: absolute;
+    top: 0.375rem;
+    right: 0.375rem;
+    background-color: #ef4444;
+    color: #ffffff;
+    font-size: 0.7rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.repeater-item .remove-button:hover {
+    background-color: #dc2626;
+    transform: scale(1.1);
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.action-button {
+    flex: 1;
+    padding: 0.875rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.75rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.clear-button {
+    background-color: #d1d5db;
+    color: #4b5563;
+}
+
+.clear-button:hover {
+    background-color: #9ca3af;
+}
+
+.download-button {
+    background-color: #1f2937;
+    color: #ffffff;
+}
+
+.download-button:hover {
+    background-color: #4b5563;
+}
+
+.preview-section {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e7eb;
+    margin: 1rem;
+}
+
+.resume-content {
+    background-color: #ffffff;
+    padding: 2rem 3rem;
+    min-height: 100%;
+    border-radius: 1rem;
+}
+
+.resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.preview-name {
+    font-family: 'Merriweather', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    letter-spacing: -0.05rem;
+}
+
+.preview-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+.contact-item {
+    margin-bottom: 0.25rem;
+}
+
+.contact-item a {
+    color: #3b82f6;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.contact-item a:hover {
+    color: #2563eb;
+}
+
+.preview-summary {
+    font-size: 0.95rem;
+    color: #4b5563;
+    margin-bottom: 2rem;
+}
+
+.preview-section-title {
+    font-family: 'Merriweather', serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #1f2937;
+    border-bottom: 2px solid #374151;
+    padding-bottom: 0.4rem;
+    margin-top: 2rem;
+    margin-bottom: 0.6rem;
+}
+
+.resume-item {
+    margin-bottom: 1.5rem;
+}
+
+.resume-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.resume-item-title {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #1f2937;
+}
+
+.resume-item-subtitle {
+    font-style: italic;
+    color: #6b7280;
+    font-size: 0.95rem;
+}
+
+.resume-item-dates {
+    font-size: 0.85rem;
+    color: #6b7280;
+    white-space: nowrap;
+}
+
+.resume-item-description {
+    font-size: 0.9rem;
+    color: #4b5563;
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.preview-skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    line-height: 1.2;
+}
+
+.skill-tag {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #3b82f6;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+}
+
+.js-skill {
+    background-color: #f7df1e;
+    color: #000000;
+}
+
+.react-skill {
+    background-color: #61dafb;
+    color: #000000;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 1023px) {
+    .container {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .form-section {
+        padding: 1rem;
+    }
+
+    .preview-section {
+        padding: 1rem;
+        margin: 0;
+    }
+
+    .resume-content {
+        padding: 1rem;
+    }
+
+    .form-title {
+        font-size: 1.75rem;
+    }
+
+    .preview-name {
+        font-size: 2rem;
+    }
+
+    .preview-contact {
+        font-size: 0.8rem;
+    }
+
+    .preview-section-title {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .grid-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .resume-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .preview-contact {
+        align-items: flex-start;
+        margin-top: 0.5rem;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume Builder</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <div class="form-section">
+            <h1 class="form-title">Resume Builder</h1>
+            <form id="resumeForm">
+
+                <section class="form-group">
+                    <h2 class="section-title">Personal Information</h2>
+                    <div class="grid-layout">
+                        <input type="text" id="name" placeholder="Full Name">
+                        <input type="email" id="email" placeholder="Email Address">
+                        <input type="tel" id="phone" placeholder="Phone Number">
+                        <input type="text" id="linkedin" placeholder="LinkedIn Profile URL">
+                    </div>
+                </section>
+
+                <section class="form-group">
+                    <h2 class="section-title">Profile Summary</h2>
+                    <textarea id="profile" rows="4" placeholder="A brief summary of your professional skills and experience."></textarea>
+                </section>
+
+                <section class="form-group" id="educationSection">
+                    <h2 class="section-title">
+                        Education
+                        <button type="button" class="add-button" id="addEducation">+</button>
+                    </h2>
+                    <div class="repeater-container" id="educationContainer">
+                    </div>
+                </section>
+
+                <section class="form-group" id="experienceSection">
+                    <h2 class="section-title">
+                        Work Experience
+                        <button type="button" class="add-button" id="addExperience">+</button>
+                    </h2>
+                    <div class="repeater-container" id="experienceContainer">
+                    </div>
+                </section>
+
+                <section class="form-group">
+                    <h2 class="section-title">Skills</h2>
+                    <textarea id="skills" rows="2" placeholder="List your skills, separated by commas (e.g., JavaScript, Python, UI/UX Design)"></textarea>
+                </section>
+
+                <div class="button-group">
+                    <button type="button" class="action-button clear-button" id="clearForm">Clear Form</button>
+                    <button type="button" class="action-button download-button" id="downloadPdf">Download as PDF</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="preview-section" id="resumePreview">
+            <div class="resume-content">
+                <header class="resume-header">
+                    <h1 class="preview-name" id="previewName"></h1>
+                    <div class="preview-contact" id="previewContact"></div>
+                </header>
+                
+                <div class="preview-summary" id="previewProfile"></div>
+
+                <section id="previewEducationSection" class="hidden">
+                    <h2 class="preview-section-title">EDUCATION</h2>
+                    <div id="previewEducation"></div>
+                </section>
+
+                <section id="previewExperienceSection" class="hidden">
+                    <h2 class="preview-section-title">EXPERIENCE</h2>
+                    <div id="previewExperience"></div>
+                </section>
+
+                <section id="previewSkillsSection" class="hidden">
+                    <h2 class="preview-section-title">TECHNICAL SKILLS AND INTERESTS</h2>
+                    <div id="previewSkills"></div>
+                </section>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="style.js"></script>
+</body>
+</html>
